@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #222;
-    color: white;
+    background-color: #979494;
+    color: rgb(238, 232, 232);
     padding: 50px;
 }
 .dado-container {
