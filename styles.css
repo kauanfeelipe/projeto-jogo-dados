@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 50px;
+}
+.dado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.dado {
+    width: 120px;
+    height: 120px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Dice-6-b.svg') no-repeat center;
+    background-size: cover;
+    transform: rotate(0deg);
+    transition: transform 1s ease-in-out;
+}
+.botao {
+    padding: 12px 25px;
+    font-size: 20px;
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    color: #222;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.botao:hover {
+    background: linear-gradient(45deg, #ff9900, #ff6600);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 153, 0, 0.6);
+}
