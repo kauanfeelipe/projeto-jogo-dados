@@ -112,7 +112,7 @@ h1 {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.8rem; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 1.6rem; /* Reduz o tamanho da fonte em telas menores */
         margin: 15px 0; /* Ajusta a margem */
     }
 }
