@@ -3,25 +3,28 @@ body {
     text-align: center;
     background-color: #979494;
     color: rgb(238, 232, 232);
-    padding: 50px;
+    padding: 20px; /* Reduzido o padding para telas menores */
 }
+
 .dado-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 150px; /* Altura reduzida para telas menores */
 }
+
 .dado {
-    width: 120px;
-    height: 120px;
+    width: 100px; /* Tamanho reduzido para telas menores */
+    height: 100px; /* Tamanho reduzido para telas menores */
     background: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Dice-6-b.svg') no-repeat center;
     background-size: cover;
     transform: rotate(0deg);
     transition: transform 1s ease-in-out;
 }
+
 .botao {
-    padding: 12px 25px;
-    font-size: 20px;
+    padding: 10px 20px; /* Padding reduzido para telas menores */
+    font-size: 18px; /* Tamanho da fonte reduzido para telas menores */
     background: linear-gradient(45deg, #ffcc00, #ff9900);
     color: #222;
     border: none;
@@ -32,8 +35,84 @@ body {
     box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .botao:hover {
     background: linear-gradient(45deg, #ff9900, #ff6600);
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(255, 153, 0, 0.6);
+}
+
+/* Media query para telas maiores (desktops) */
+@media (min-width: 768px) {
+    body {
+        padding: 50px; /* Padding maior para telas maiores */
+    }
+
+    .dado-container {
+        height: 200px; /* Altura maior para telas maiores */
+    }
+
+    .dado {
+        width: 120px; /* Tamanho maior para telas maiores */
+        height: 120px; /* Tamanho maior para telas maiores */
+    }
+
+    .botao {
+        padding: 12px 25px; /* Padding maior para telas maiores */
+        font-size: 20px; /* Tamanho da fonte maior para telas maiores */
+    }
+}
+
+/* Media query para telas muito pequenas (smartphones pequenos) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Padding menor para telas muito pequenas */
+    }
+
+    .dado-container {
+        height: 100px; /* Altura menor para telas muito pequenas */
+    }
+
+    .dado {
+        width: 80px; /* Tamanho menor para telas muito pequenas */
+        height: 80px; /* Tamanho menor para telas muito pequenas */
+    }
+
+    .botao {
+        padding: 8px 16px; /* Padding menor para telas muito pequenas */
+        font-size: 16px; /* Tamanho da fonte menor para telas muito pequenas */
+    }
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Fonte personalizada */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #ffcc00; /* Cor do texto (fallback para navegadores que não suportam gradiente no texto) */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem superior e inferior */
+    padding: 10px; /* Espaçamento interno */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+    background: linear-gradient(45deg, #ff9900, #ff6600); /* Fundo gradiente */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto (para navegadores WebKit) */
+    background-clip: text; /* Aplica o gradiente ao texto (padrão moderno) */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente (para navegadores WebKit) */
+    color: transparent; /* Torna o texto transparente (padrão moderno) */
+    display: inline-block; /* Permite que o gradiente funcione corretamente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(255, 153, 0, 0.5); /* Sombra ao redor do h1 */
+}
+
+/* Fallback para navegadores que não suportam background-clip: text */
+@supports not (background-clip: text) {
+    h1 {
+        color: #ffcc00; /* Mantém a cor sólida como fallback */
+        background: none; /* Remove o gradiente */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Mantém a sombra no texto */
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte em telas menores */
+        margin: 15px 0; /* Ajusta a margem */
+    }
 }
