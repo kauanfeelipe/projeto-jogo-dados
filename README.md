@@ -40,7 +40,7 @@ Este projeto exibe um dado virtual que muda de face aleatoriamente sempre que o 
 1. **Clone o repositório:**
 
 
-git clone https://github.com/seu-usuario/simulador-de-dado.git
+git clone https://github.com/kauanfeelipe/projeto-jogo-dados.git
 
 Abra o arquivo index.html no navegador de sua preferência.
 
